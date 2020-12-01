@@ -20,6 +20,14 @@ require("bootstrap/dist/js/bootstrap")
 document.addEventListener("turbolinks:load", () => {
   $(function () {
     $("h1").css("color", "#0000FF");
+    $('.js-text_field').on('keyup', function () { 
+    //  キーボードを入力したタイミングで以下の処理を実行する
+    var textField = $('.js-text_field');
+    var title = $.trim(textField.val());
+
+    console.log(title); // 検索窓の値が取れているか確認
+  });
+
   });
 
   
